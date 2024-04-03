@@ -4,7 +4,7 @@ import Completed from "./Completed";
 import "./App.css";
 
 function Game() {
-  const [timer, setTimer] = useState(60); // 60 seconds timer
+  const [timer, setTimer] = useState(60);
   const [completedFruits, setCompletedFruits] = useState<string[]>([]);
   const [isMatched, setIsMatched] = useState<boolean>(false);
   const [redFruitData, setRedFruitData] = useState<
@@ -101,7 +101,7 @@ function Game() {
         { fruit: "pineapple", icon: "🍍", letter: "P" },
       ])
     );
-    setTimer(60); // Set initial timer value to 60 seconds
+    setTimer(60);
   }, []);
 
   return (
@@ -245,7 +245,6 @@ function Game() {
           </div>
         )}
 
-        {/* Display game over message when timer is 0 */}
         {timer === 0 && <Completed bananas={completedFruits.length + 1} />}
         {/* timer */}
         <div className="p-3 bg-sky-700 opacity-85 absolute top-4 right-4 text-white rounded-3xl text-2xl font-bold border-white border-4">
